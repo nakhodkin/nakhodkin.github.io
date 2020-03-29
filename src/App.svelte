@@ -87,7 +87,7 @@
 	<footer>
 		<section class="contact">
 			<span>You are welcome to shot me an email at</span>
-			<a href="mailto:{email}" title="{email}">{email}</a>
+			<a href="mailto:{email}?subject=Mail from nakhodkin.dev" title="{email}">{email}</a>
 		</section>
 
 		<section>
