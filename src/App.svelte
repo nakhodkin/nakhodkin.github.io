@@ -137,7 +137,7 @@
 					</menu>
 				</form>
 
-				<span>You are welcome to shot me an email at</span>
+				<span>Shot me an email at</span>
 				<a href="mailto:{email}?subject=Mail from nakhodkin.dev" title="{email}">{email}</a>
 			</section>
 
@@ -242,6 +242,7 @@
 		flex-direction: column;
 		justify-content: center;
 		background: linear-gradient(to top, #939dce, #5980cb);
+		box-shadow: -2px 0 75px rgba(0,0,0,.3);
 	}
 
 	main {
@@ -272,10 +273,15 @@
 	}
 
 	h1 {
-		/*color: #ff3e00;*/
+		margin-block-start: 0;
+		margin-block-end: .5em;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+
+	h2 {
+		margin-block-end: 1em;
 	}
 
 	@media (min-width: 640px) {
@@ -327,7 +333,12 @@
 
 	input, textarea {
 		border-radius: 4px;
+		border: none;
 		width: 100%;
+	}
+
+	#favDialog input {
+		border: 1px solid #1f1f1f;
 	}
 
 	textarea {
@@ -336,7 +347,7 @@
 
 	input:focus, textarea:focus {
 		outline: none;
-		box-shadow: 0 0 0 2px #4056a1;
+		box-shadow: 0 0 0 1px #4056a1;
 	}
 
 	.form button {
