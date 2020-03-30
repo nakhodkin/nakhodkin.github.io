@@ -30,7 +30,7 @@
     }
 
     .background {
-        background: rgba(255, 255, 255, 0.5) no-repeat center / cover url("../assets/photo-of-snow-covered-mountain-3876370.jpg");
+        background: rgba(255, 255, 255, 0.5) no-repeat center / cover url("../assets/images/photo-of-snow-covered-mountain-3876370.jpg");
         display: flex;
         align-items: center;
     }
