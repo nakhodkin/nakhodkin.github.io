@@ -7,6 +7,7 @@ import replace from '@rollup/plugin-replace';
 import { config } from 'dotenv';
 
 const production = !process.env.ROLLUP_WATCH;
+let API_URL = process.env.API_URL || config().parsed.API_URL;
 
 export default {
 	input: 'src/main.js',
@@ -55,7 +56,9 @@ export default {
 				env: {
 					isProd: production,
 					...config().parsed, // attached the .env config
-					api: `${config().parsed.API_URL_BASE}/${production ? 'PROD' : 'DEV'}`
+					run: process.env.GITHUB_RUN_NUMBER,
+					date: new Intl.DateTimeFormat().format(new Date),
+					api: API_URL
 				}
 			}),
 		}),

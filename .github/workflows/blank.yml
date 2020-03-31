@@ -21,7 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Audit dependencies
+        run: npm audit
+
       - name: Build project
+        env:
+          API_URL: ${{ secrets.API_URL }}
         run: npm run build
 
       - name: Archive production artifacts
@@ -40,15 +45,12 @@ jobs:
         with:
           name: public
 
-      - name: list build artifact
-        run: ls
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Copy files to S3 with the AWS CLI
-        run: aws s3 sync public s3://nakhodkin.dev
+        run: aws s3 sync public s3://${{ AWS_BUCKET_NAME }}

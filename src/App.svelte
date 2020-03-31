@@ -1,12 +1,15 @@
 <script>
 	import Intro from './Intro.svelte';
 	import Inquiry from './Inquiry.svelte';
+	import BuildInfo from './BuildInfo.svelte';
 
 	import FormDialog from './FormDialog.svelte';
 	import SuccessDialog from './SuccessDialog.svelte';
 	import ErrorDialog from './ErrorDialog.svelte';
 
 	export let api;
+	export let run;
+	export let date;
 </script>
 
 <div class="app">
@@ -17,6 +20,8 @@
 <FormDialog {api} />
 <SuccessDialog />
 <ErrorDialog />
+
+<BuildInfo {run} />
 
 <style>
 	.app {
