@@ -29,6 +29,9 @@ jobs:
       - name: Audit dependencies
         run: npm audit
 
+      - name: Run unit tests
+        run: npm test
+
       - name: Build project
         env:
           API_URL: ${{ secrets.API_URL }}

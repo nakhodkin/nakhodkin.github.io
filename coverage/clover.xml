@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1585666572732" clover="3.2.0">
+  <project timestamp="1585666572732" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="0" coveredmethods="0" elements="8" coveredelements="4" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="BuildInfo.svelte" path="/Users/ifeature/IdeaProjects/www/src/BuildInfo.svelte">
+      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="8" count="3" type="cond" truecount="0" falsecount="2"/>
+      <line num="9" count="3" type="cond" truecount="0" falsecount="2"/>
+    </file>
+  </project>
+</coverage>
