@@ -21,7 +21,7 @@
 <SuccessDialog />
 <ErrorDialog />
 
-<BuildInfo {run} />
+<BuildInfo {run} {date} />
 
 <style>
 	.app {
