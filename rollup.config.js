@@ -9,6 +9,13 @@ import { config } from 'dotenv';
 const production = !process.env.ROLLUP_WATCH;
 let API_URL = process.env.API_URL || config().parsed.API_URL;
 
+const options = {
+	year: 'numeric', month: 'numeric', day: 'numeric',
+	hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short'
+};
+
+const formatter = new Intl.DateTimeFormat('en-US', options);
+
 export default {
 	input: 'src/main.js',
 	output: {
@@ -57,7 +64,7 @@ export default {
 					isProd: production,
 					...config().parsed, // attached the .env config
 					run: process.env.GITHUB_RUN_NUMBER,
-					date: new Intl.DateTimeFormat().format(new Date),
+					date: formatter.format(new Date()),
 					api: API_URL
 				}
 			}),
