@@ -61,7 +61,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Empy target bucket
-        run: aws s3 rm s3://${{ secrets.AWS_BUCKET_NAME }}
+        run: aws s3 rm s3://${{ secrets.AWS_BUCKET_NAME }} --recursive
 
       - name: Copy files to S3 with the AWS CLI
         run: aws s3 sync public s3://${{ secrets.AWS_BUCKET_NAME }}
