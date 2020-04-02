@@ -143,10 +143,6 @@
 		box-shadow: 0px 0px 0px 2px #c2cbe3;
 	}
 
-	menu {
-		padding-inline-start: 0;
-	}
-
 	img {
 		position: absolute;
 	}
