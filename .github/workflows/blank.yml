@@ -53,6 +53,9 @@ jobs:
         with:
           name: public
 
+      - name: ls current directory
+        run: ls
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
